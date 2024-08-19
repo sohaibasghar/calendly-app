@@ -1,33 +1,3 @@
-// 'use client'
-// import { loadStripe } from '@stripe/stripe-js';
-
-// const stripePromise = loadStripe(process.env.NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY);
-
-// const PaymentButton = ({ person }) => {
-//   const handleClick = async () => {
-//     const stripe = await stripePromise;
-
-//     const response = await fetch('/api/checkout_sessions', {
-//       method: 'POST',
-//       headers: {
-//         'Content-Type': 'application/json',
-//       },
-//       body: JSON.stringify({
-//         name: person.name,
-//         amount: 10000, // $100 in cents
-//         successUrl: `${window.location.origin}/booking?url=${encodeURIComponent(person.calendlyUrl)}`,
-//         cancelUrl: `${window.location.origin}/cancel`,
-//       }),
-//     });
-
-//     const session = await response.json();
-//     await stripe.redirectToCheckout({ sessionId: session.id, });
-//   };
-
-//   return <button onClick={handleClick}>Pay $100 to Book</button>;
-// };
-
-// export default PaymentButton;
 import React, { useState } from 'react';
 import { loadStripe } from '@stripe/stripe-js';
 
