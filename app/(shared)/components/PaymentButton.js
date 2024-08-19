@@ -39,7 +39,7 @@ const PaymentButton = ({ person }) => {
       body: JSON.stringify({
         name: person.name,
         amount,
-        successUrl: `${window.location.origin}/calendly?url=${encodeURIComponent(person.calendlyUrl)}`,
+        successUrl: `${window.location.origin}/booking?url=${encodeURIComponent(person.calendlyUrl)}`,
         cancelUrl: `${window.location.origin}/`,
       }),
     });
